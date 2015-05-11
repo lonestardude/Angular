@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>NFL Teams</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="main" ng-controller = "MyController">
+
+  <div class="search">
+    <h1>NFL Teams</h1>
+    <div>
+        <label for="nflSearch">search: </label>
+        <input id="nflSearch" ng-model="query" placeholder="Search for NFL Teams" autofocus>
+    </div>
+    <div>
+        <label class="formgroup">by:
+          <select ng-model="teamOrder">
+            <option value="team">Name</option>
+            <option value="conference">Conference</option>
+            <option value="division">Division</option>
+          </select>
+        </label>
+    </div>
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" checked>
+      ascending
+     </label>
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" value="reverse">
+      descending
+    </label>
+  </div>
+  <ul class="teamlist">
+    <li class="team" ng-repeat="item in teams | filter: query | orderBy: teamOrder:direction">
+      <div class="info">
+        <h2>{{item.team}}</h2>
+        <h3>{{item.division}}</h3>
+      </div>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

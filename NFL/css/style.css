@@ -1,0 +1,7 @@
+.search{margin: 0 auto; width: 50%; min-width: 300px; border-width: 1px; border-color: #cccccc; border-style: solid; padding: 10px; border-radius: 5px; background-color: #f6f6f6;}
+ul{list-style-type: none; margin: 0px; padding: 0px;}
+.team{border-width: 1px; border-color: #000000; border-style: solid; width: 50%; min-width: 300px; padding: 5px 10px; margin: 5px auto; border-radius: 5px; background-color: #ffffcc;}
+h1{font-size: 1.2em; padding: 0px; margin: 0px;}
+h2{font-size: 1em; padding: 0px; margin: 0px;}
+h3{font-size: .9em; padding: 0px; margin: 0px;}
+body{font-family: "Arial Black", Gadget, sans-serif; background-color: #036}
